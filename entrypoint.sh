@@ -14,4 +14,6 @@ cd /github/workspace
 cp -a wiki/. /wiki
 
 cd /wiki
-ls
+
+echo ${USERNAME}
+echo ${ACCESS_TOKEN}
