@@ -24,8 +24,3 @@ inputs:
 runs:
   using: 'docker'
   image: 'Dockerfile'
-  env:
-    USERNAME: ${{ inputs.username }}
-    ACCESS_TOKEN: ${{ inputs.access_token }}
-    WIKI_FOLDER: ${{ inputs.wiki_folder }}
-    COMMIT_MESSAGE: $${{ inputs.commit_message }}
