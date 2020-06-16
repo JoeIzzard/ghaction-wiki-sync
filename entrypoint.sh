@@ -2,4 +2,9 @@
 
 WIKI="https://github.com/${GITHUB_REPOSITORY}.wiki.git"
 
-echo $WIKI
+echo "Cloning WIKI Repo..."
+git clone $WIKI /wiki
+cd /wiki
+
+echo "Cleaning..."
+ls
