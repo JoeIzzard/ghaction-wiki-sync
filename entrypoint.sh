@@ -11,12 +11,7 @@ rm -r *
 
 echo "Workspace"
 cd /github/workspace
-ls
+cp -a wiki/. /wiki
 
-echo "Home"
-cd /github/home
-ls
-
-echo "Workflow"
-cd /github/workflow
+cd /wiki
 ls
