@@ -21,6 +21,8 @@ git config --global user.name "${USERNAME}"
 echo "Commit..."
 if [[ -z ${COMMIT_MESSAGE} ]]; then
     echo "Commit Message not set"
+else
+    echo $COMMIT_MESSAGE
 fi
 cd /wiki
 git add -A
