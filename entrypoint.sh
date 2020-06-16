@@ -7,4 +7,7 @@ git clone $WIKI /wiki
 cd /wiki
 
 echo "Cleaning..."
-ls
+rm -r *
+
+echo "Copying new files"
+echo ${GITHUB_WORKSPACE}
