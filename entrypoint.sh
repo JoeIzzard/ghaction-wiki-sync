@@ -11,8 +11,14 @@ echo "Cleaning..."
 rm -r *
 
 echo "Copy Files..."
+echo "-> Wiki Folder: ${INPUT_WIKI_FOLDER}"
 cd /github/workspace
-cp -a wiki/. /wiki
+
+if [ ! -d "/github/workspace/${INPUT_WIKI_FOLDER}" ]; then
+    echo "Specified Wiki Folder Missing"
+    exit 1
+fi
+cp -a ${INPUT_WIKI_FOLDER}/. /wiki
 
 echo "Git Config..."
 echo "-> User: ${INPUT_COMMIT_USERNAME}"
