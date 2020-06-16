@@ -1,3 +1,5 @@
 #!/bin/sh
 
-echo ${GITHUB_REPOSITORY}
+WIKI='https://github.com/' + ${GITHUB_REPOSITORY} + '.wiki.git'
+
+echo $WIKI
