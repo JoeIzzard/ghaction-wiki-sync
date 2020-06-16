@@ -10,5 +10,5 @@ echo "Cleaning..."
 rm -r *
 
 echo "Copying new files"
-cd /github/workspace
+cd /github
 ls
