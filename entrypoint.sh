@@ -10,10 +10,15 @@ cd /wiki
 echo "Cleaning..."
 rm -r *
 
-echo "Workspace"
+echo "Copy Files..."
 cd /github/workspace
 cp -a wiki/. /wiki
 
+echo "Git Config..."
+git config --global user.email "${USERNAME}@user.noreply.github.com"
+git config --global user.name "${USERNAME}"
+
+echo "Commit..."
 cd /wiki
 git add -A
 git commit -m "Wiki Sync"
