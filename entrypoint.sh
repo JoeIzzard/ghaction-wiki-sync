@@ -9,6 +9,14 @@ cd /wiki
 echo "Cleaning..."
 rm -r *
 
-echo "Copying new files"
-cd /github
+echo "Workspace"
+cd /github/workspace
+ls
+
+echo "Home"
+cd /github/home
+ls
+
+echo "Workflow"
+cd /github/workflow
 ls
