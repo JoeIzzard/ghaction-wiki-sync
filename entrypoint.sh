@@ -27,6 +27,7 @@ git config --global user.email "${INPUT_COMMIT_EMAIL}"
 git config --global user.name "${INPUT_COMMIT_USERNAME}"
 
 echo "Commit..."
+echo "-> Message: ${INPUT_COMMIT_MESSAGE}"
 cd /wiki
 git add -A
 git commit -m "${INPUT_COMMIT_MESSAGE}"
