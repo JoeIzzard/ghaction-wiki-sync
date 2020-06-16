@@ -17,4 +17,4 @@ cp -a wiki/. /wiki
 cd /wiki
 git add -A
 git commit -m "Wiki Sync"
-git push WIKIP 
+git push $WIKIP 
