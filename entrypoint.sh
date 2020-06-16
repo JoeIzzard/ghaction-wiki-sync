@@ -1,6 +1,7 @@
 #!/bin/sh
 
 WIKI="https://github.com/${GITHUB_REPOSITORY}.wiki.git"
+WIKIP="https://${USERNAME}:${ACCESS_TOKEN}@github.com/${GITHUB_REPOSITORY}.wiki.git"
 
 echo "Cloning WIKI Repo..."
 git clone $WIKI /wiki
@@ -14,6 +15,6 @@ cd /github/workspace
 cp -a wiki/. /wiki
 
 cd /wiki
-
-echo ${USERNAME}
-echo ${ACCESS_TOKEN}
+git add -A
+git commit -m "Wiki Sync"
+git push WIKIP 
