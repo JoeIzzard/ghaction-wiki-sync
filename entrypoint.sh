@@ -19,7 +19,7 @@ git config --global user.email "${USERNAME}@user.noreply.github.com"
 git config --global user.name "${USERNAME}"
 
 echo "Commit..."
-if [[ -z ${COMMIT_MESSAGE}  || ${COMMIT_MESSAGE} == "" ]]; then
+if [ -z ${COMMIT_MESSAGE} ]; then
     echo "Commit Message not set"
 else
     echo $COMMIT_MESSAGE
