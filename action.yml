@@ -1,0 +1,5 @@
+name: 'Wiki Sync'
+description: 'Sync a wiki folder with your GitHub Wiki'
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
