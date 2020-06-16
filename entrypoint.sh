@@ -1,3 +1,3 @@
 #!/bin/sh
 
-ls
+echo ${GITHUB_REPOSITORY}
