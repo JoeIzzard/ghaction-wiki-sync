@@ -1,5 +1,9 @@
 name: 'Wiki Sync'
 description: 'Sync a wiki folder with your GitHub Wiki'
+author: 'JoeIzzard'
+branding:
+    icon: upload-cloud
+    color: orange
 inputs:
     username:
         description: 'The username of the repo owner'
