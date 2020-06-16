@@ -1,5 +1,23 @@
 name: 'Wiki Sync'
 description: 'Sync a wiki folder with your GitHub Wiki'
+inputs:
+    username:
+        description: 'The username of the repo owner'
+        required: true
+    access_token:
+        description: 'The access token with Repo access. Can be passed in using `{{ secrets.GITHUB_TOKEN }}`.'
+        required: true
+    wiki_folder:
+        description: 'The folder you want to sync the repo with'
+        required: false
+    commit_message:
+        description: 'A custom commit message to be used'
+        required: false
 runs:
   using: 'docker'
   image: 'Dockerfile'
+  env:
+    username: ${{ inputs.username }}
+    access_token: ${{ inputs.access_token }}
+    wiki_folder: ${{ inputs.wiki_folder }}
+    commit_message: $${{ inputs.commit_message }}
