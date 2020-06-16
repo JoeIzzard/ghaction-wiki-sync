@@ -10,9 +10,17 @@ inputs:
     wiki_folder:
         description: 'The folder you want to sync the repo with'
         required: false
+        default: 'wiki'
     commit_message:
         description: 'A custom commit message to be used'
         required: false
+        default: 'action: wiki sync'
+    commit_username:
+        description: 'The email address to use with the commit'
+        required: true
+    commit_email:
+        description: 'The email address to use when committing'
+        required: true
 runs:
   using: 'docker'
   image: 'Dockerfile'
