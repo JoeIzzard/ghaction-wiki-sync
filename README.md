@@ -37,6 +37,7 @@ In this example, the `wiki` folder will be synced with the wiki repo everytime a
 | `username` | Y | The repo owner's name. Used for pulling and pushing |
 | `access_token` | Y | An access token to use when pushing to the Wiki repo, can be set using `${{ secrets.GITHUB_TOKEN }}` |
 | `wiki_folder` | N | The folder to sync to the Wiki. <br/> <i>Default: `wiki`</i> |
+| `ignore_safe_warnings` | N | Fixes `fatal: detected dubious ownership in repository at '/wiki'` <br/> <i>Default: `false`</i> |
 | `commit_username` | Y | The username to use when pushing to the wiki repo |
 | `commit_email` | Y | The email address to use when pushing to the wiki repo. Our example uses the [annonymous email](https://help.github.com/en/github/setting-up-and-managing-your-github-user-account/setting-your-commit-email-address) from GitHub |
 | `commit_message` | N | The commit message to use when pushing to the wiki repo <br/><i>Default: `action: wiki sync` |

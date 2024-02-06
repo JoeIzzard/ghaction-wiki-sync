@@ -20,6 +20,10 @@ if [ ! -d "/github/workspace/${INPUT_WIKI_FOLDER}" ]; then
 fi
 cp -a ${INPUT_WIKI_FOLDER}/. /wiki
 
+if [ "${INPUT_IGNORE_SAFE_WARNINGS}" = "true" ]; then
+    git config --global --add safe.directory /wiki
+fi
+
 echo "Git Config..."
 echo "-> User: ${INPUT_COMMIT_USERNAME}"
 echo "-> Email: ${INPUT_COMMIT_EMAIL}"

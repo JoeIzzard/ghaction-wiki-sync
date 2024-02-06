@@ -15,6 +15,10 @@ inputs:
         description: 'The folder you want to sync the repo with'
         required: false
         default: 'wiki'
+    ignore_safe_warnings:
+        description: 'Fixes `fatal: detected dubious ownership in repository at /wiki`'
+        required: false
+        default: 'false'
     commit_message:
         description: 'A custom commit message to be used'
         required: false
