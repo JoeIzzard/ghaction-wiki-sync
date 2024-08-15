@@ -5,12 +5,12 @@ branding:
     icon: upload-cloud
     color: orange
 inputs:
-    username:
-        description: 'The username of the repo owner'
-        required: true
     access_token:
-        description: 'The access token with Repo access. Can be passed in using `{{ secrets.GITHUB_TOKEN }}`.'
-        required: true
+        description: |
+            An access token to use when pushing to the Wiki repo. Usually
+            doesn't need to be set, as it defaults to `${{ github.token }}`.
+        required: false
+        default: ${{ github.token }}
     wiki_folder:
         description: 'The folder you want to sync the repo with'
         required: false
@@ -26,5 +26,7 @@ inputs:
         description: 'The email address to use when committing'
         required: true
 runs:
-  using: 'docker'
-  image: 'Dockerfile'
+  using: 'composite'
+  steps:
+      - run: ${{ github.action_path }}/sync.sh
+        shell: bash
